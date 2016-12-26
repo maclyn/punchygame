@@ -115,7 +115,7 @@ static void gfx_update_callback(Layer *me, GContext *ctx) {
   //Set HUD text
   if(current_action == NONE){
     snprintf(hud_buffer, 40, "By IniPage Software");
-        graphics_draw_text(ctx, "Press up to play or down to calibrate", hud_font, GRect(2, 74, 140, 48), 
+        graphics_draw_text(ctx, "Press up to play", hud_font, GRect(2, 74, 140, 48), 
                        GTextOverflowModeWordWrap, GTextAlignmentCenter, NULL);
   } else if (current_action == DONE){
     snprintf(hud_buffer, 30, "Final Score %d", points);
@@ -240,7 +240,10 @@ static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
 
 //Indicates down click
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
-  if(!game_running && !is_calibrating) calibrate();
+  if(!game_running && !is_calibrating){
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "calibrating not impl. yet (ever)");
+    //calibrate();
+  }
 }
 
 static void click_config_provider(void *context) {
@@ -297,7 +300,7 @@ static void init(void) {
     .load = window_load,
     .unload = window_unload
   });
-  window_set_fullscreen(window, true);
+  //window_set_fullscreen(window, true);
   window_set_background_color(window, GColorWhite);
   window_stack_push(window, true);
 }

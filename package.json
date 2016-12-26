@@ -1,0 +1,48 @@
+{
+    "author": "Maclyn",
+    "dependencies": {},
+    "keywords": [],
+    "name": "punchy",
+    "pebble": {
+        "displayName": "Punchy",
+        "enableMultiJS": false,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/menuimg.png",
+                    "menuIcon": true,
+                    "name": "MENU_IMAGE",
+                    "type": "png"
+                },
+                {
+                    "file": "images/duck.png",
+                    "name": "DUCK",
+                    "type": "png"
+                },
+                {
+                    "file": "images/block.png",
+                    "name": "BLOCK",
+                    "type": "png"
+                },
+                {
+                    "file": "images/hit.png",
+                    "name": "HIT",
+                    "type": "png"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite"
+        ],
+        "uuid": "2803ff95-5bda-4db6-92e4-55cd4a954ff3",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
